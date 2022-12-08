@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build-client": "cd client && npm run build",
-    "server": "nodemon server --ignore client",
+    "server": "node server --ignore client",
     "client": "npm start --prefix client",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "npm run server",
     "dev": "nodemon -r esm server.js --ignore client",
     "startdev": "concurrently --kill-others-on-fail \"npm run dev\" \"npm run client\""
   },
